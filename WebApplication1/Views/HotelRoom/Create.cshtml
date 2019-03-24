@@ -1,0 +1,76 @@
+﻿@model WebApplication1.Models.HotelRoom
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@*<br/>
+    <br/>
+    <br/>
+
+    <h4>HotelRoom</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="RoomType" class="control-label"></label>
+                    <input asp-for="RoomType" class="form-control" />
+                    <span asp-validation-for="RoomType" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="RoomPrice" class="control-label"></label>
+                    <input asp-for="RoomPrice" class="form-control" />
+                    <span asp-validation-for="RoomPrice" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="RoomDescription" class="control-label"></label>
+                    <input asp-for="RoomDescription" class="form-control" />
+                    <span asp-validation-for="RoomDescription" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="RoomImage" class="control-label"></label>
+                    <input asp-for="RoomImage" class="form-control" />
+                    <span asp-validation-for="RoomImage" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-primary" type="submit" value="Create" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a class="btn btn-primary" asp-action="Index">Back to List</a>
+    </div>*@
+
+<br />
+<form asp-action="Create" asp-controller="HotelRoom">
+    <div class="form-group">
+        <label for="RoomType">Room Type</label>
+        <input type="text" asp-for="RoomType" class="form-control" placeholder="Enter Room Type Name" required autofocus>
+    </div>
+
+    <div class="form-group">
+        <label for="RoomPrice">Room Price</label>
+        <input type="text" asp-for="RoomPrice" class="form-control" placeholder="Enter Room Price" required autofocus>
+    </div>
+
+    <div class="form-group">
+        <label for="RoomDescription">Room Description</label>
+        <input type="text" asp-for="RoomDescription" class="form-control" placeholder="Enter Room Description" required autofocus>
+    </div>
+
+    <div class="form-group">
+        <label for="RoomImage">Room Image</label>
+        <input type="text" asp-for="RoomImage" class="form-control" placeholder="Enter Room Image" required autofocus>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-info" type="submit">Submit</button>
+        <br />
+        <br />
+        <a asp-controller="HotelRoom" asp-action="Index" class="btn btn-primary">Back to List</a>
+    </div>
+</form>

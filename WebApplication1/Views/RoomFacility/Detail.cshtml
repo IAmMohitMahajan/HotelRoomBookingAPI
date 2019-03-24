@@ -1,0 +1,66 @@
+﻿@model WebApplication1.Models.RoomFacility
+
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br/>
+<br/>
+<br/>
+<div>
+    <h4>RoomFacility</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomFacilityId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RoomFacilityId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsAvilable)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsAvilable)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Wifi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Wifi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AirConditioner)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AirConditioner)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ekettle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ekettle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Refrigerator)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Refrigerator)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomFacilityDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RoomFacilityDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RoomId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a  class="btn btn-primary" asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebApplication1.Models.UserDetail>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br/>
+<br/>
+<br/>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                <a asp-controller="UserDetail" asp-action="Details" asp-route-id="@item.UserId" class="btn btn-primary">Details</a>
+                <a asp-controller="UserDetail" asp-action="Edit" asp-route-id="@item.UserId" class="btn btn-success">Edit</a>
+                <a asp-controller="UserDetail" asp-action="Delete" asp-route-id="@item.UserId" class="btn btn-primary">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,8 @@
+RoomFacilty
+	Edit
+
+
+Hotel Room
+	edit
+	delete
+

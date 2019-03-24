@@ -1,0 +1,41 @@
+﻿@model WebApplication1.Models.HotelType
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+<br />
+<h4>HotelType</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="HotelType" asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="HotelTypeId" class="control-label">Hotel </label>
+                <input asp-for="HotelTypeId" class="form-control" />
+                <span asp-validation-for="HotelTypeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HotelTypeName" class="control-label">Hotel Type Name</label>
+                <input asp-for="HotelTypeName" class="form-control" placeholder="Enter Hotel Type Name" required autofocus/>
+                <span asp-validation-for="HotelTypeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HotelTypeDescription" class="control-label">Hotel Type Description</label>
+                <input asp-for="HotelTypeDescription" class="form-control"  placeholder="Enter Hotel Type Description" required autofocus/>
+                <span asp-validation-for="HotelTypeDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input class="btn btn-primary" type="submit" value="Save" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-primary" asp-controller="HotelType" asp-action="Index">Back to List</a>
+</div>

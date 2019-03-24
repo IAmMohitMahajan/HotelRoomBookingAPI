@@ -1,0 +1,36 @@
+﻿@model WebApplication1.Models.HotelType
+
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<table class="table table-hover table table-bordered">
+    <tr>
+        <th>
+            Hotel Type Id
+        </th>
+        <td>
+            @Html.DisplayFor(model => model.HotelTypeId)
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Hotel Type Name
+        </th>
+        <td>
+            @Html.DisplayFor(model => model.HotelTypeName)
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Hotel Type Description
+        </th>
+        <td>
+            @Html.DisplayFor(model => model.HotelTypeDescription)
+        </td>
+    </tr>
+</table>
+<br />
+<br />
+<a asp-controller="HotelType" asp-action="Index" class="btn btn-primary">Back to List</a>
